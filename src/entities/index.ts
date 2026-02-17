@@ -27,6 +27,81 @@ export interface Artists {
 
 
 /**
+ * Collection ID: bakingrecipes
+ * Interface for BakingRecipes
+ */
+export interface BakingRecipes {
+  _id: string;
+  _createdDate?: Date;
+  _updatedDate?: Date;
+  /** @wixFieldType text */
+  title?: string;
+  /** @wixFieldType text */
+  country?: string;
+  /** @wixFieldType text */
+  ingredients?: string;
+  /** @wixFieldType text */
+  instructions?: string;
+  /** @wixFieldType number */
+  prepTime?: number;
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
+  image?: string;
+  /** @wixFieldType datetime */
+  createdAt?: Date | string;
+}
+
+
+/**
+ * Collection ID: cookingrecipes
+ * Interface for CookingRecipes
+ */
+export interface CookingRecipes {
+  _id: string;
+  _createdDate?: Date;
+  _updatedDate?: Date;
+  /** @wixFieldType text */
+  title?: string;
+  /** @wixFieldType text */
+  country?: string;
+  /** @wixFieldType text */
+  ingredients?: string;
+  /** @wixFieldType text */
+  instructions?: string;
+  /** @wixFieldType number */
+  prepTime?: number;
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
+  imageURL?: string;
+  /** @wixFieldType date */
+  createdAt?: Date | string;
+}
+
+
+/**
+ * Collection ID: drinksrecipes
+ * Interface for DrinksRecipes
+ */
+export interface DrinksRecipes {
+  _id: string;
+  _createdDate?: Date;
+  _updatedDate?: Date;
+  /** @wixFieldType text */
+  title?: string;
+  /** @wixFieldType text */
+  country?: string;
+  /** @wixFieldType text */
+  ingredients?: string;
+  /** @wixFieldType text */
+  instructions?: string;
+  /** @wixFieldType number */
+  prepTime?: number;
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
+  imageURL?: string;
+  /** @wixFieldType datetime */
+  createdAt?: Date | string;
+}
+
+
+/**
  * Collection ID: playlists
  * Interface for Playlists
  */

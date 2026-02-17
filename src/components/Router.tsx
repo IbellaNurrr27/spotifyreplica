@@ -2,19 +2,23 @@ import { MemberProvider } from '@/integrations';
 import { createBrowserRouter, RouterProvider, Navigate, Outlet } from 'react-router-dom';
 import { ScrollToTop } from '@/lib/scroll-to-top';
 import ErrorPage from '@/integrations/errorHandlers/ErrorPage';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import HomePage from '@/components/pages/HomePage';
-import SearchPage from '@/components/pages/SearchPage';
-import LibraryPage from '@/components/pages/LibraryPage';
-import SongDetailPage from '@/components/pages/SongDetailPage';
-import ArtistDetailPage from '@/components/pages/ArtistDetailPage';
-import PlaylistDetailPage from '@/components/pages/PlaylistDetailPage';
+import CookingPage from '@/components/pages/CookingPage';
+import BakingPage from '@/components/pages/BakingPage';
+import DrinksPage from '@/components/pages/DrinksPage';
 
-// Layout component that includes ScrollToTop
+// Layout component that includes Header, Footer, and ScrollToTop
 function Layout() {
   return (
     <>
       <ScrollToTop />
-      <Outlet />
+      <Header />
+      <main className="pt-20">
+        <Outlet />
+      </main>
+      <Footer />
     </>
   );
 }
@@ -33,38 +37,24 @@ const router = createBrowserRouter([
         },
       },
       {
-        path: "search",
-        element: <SearchPage />,
+        path: "cooking",
+        element: <CookingPage />,
         routeMetadata: {
-          pageIdentifier: 'search',
+          pageIdentifier: 'cooking',
         },
       },
       {
-        path: "library",
-        element: <LibraryPage />,
+        path: "baking",
+        element: <BakingPage />,
         routeMetadata: {
-          pageIdentifier: 'library',
+          pageIdentifier: 'baking',
         },
       },
       {
-        path: "songs/:id",
-        element: <SongDetailPage />,
+        path: "drinks",
+        element: <DrinksPage />,
         routeMetadata: {
-          pageIdentifier: 'song-detail',
-        },
-      },
-      {
-        path: "artists/:id",
-        element: <ArtistDetailPage />,
-        routeMetadata: {
-          pageIdentifier: 'artist-detail',
-        },
-      },
-      {
-        path: "playlists/:id",
-        element: <PlaylistDetailPage />,
-        routeMetadata: {
-          pageIdentifier: 'playlist-detail',
+          pageIdentifier: 'drinks',
         },
       },
       {
