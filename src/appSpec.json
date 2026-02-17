@@ -1,0 +1,221 @@
+{
+  "id": "223309ff-434a-4afc-9521-4105424b7ce6",
+  "initialPrompt": "Create a website inspired by https://www.spotify.com/",
+  "siteName": "spotify.com",
+  "brandBook": {
+    "tones": [
+      "modern",
+      "sophisticated",
+      "energetic",
+      "intuitive",
+      "premium",
+      "sleek",
+      "minimalist"
+    ],
+    "designStyle": {
+      "primaryStyle": [
+        "dark-mode",
+        "minimalist",
+        "techy"
+      ],
+      "supportingStyles": [
+        "glassmorphism",
+        "smooth-animations",
+        "responsive"
+      ]
+    },
+    "toneOfVoice": "Modern, sophisticated, energetic, intuitive, premium.",
+    "graphicElements": {
+      "icons": "Style: Minimalist, line-based icons with a consistent stroke weight. Active states use the primary accent color (#1DB954).",
+      "stickers": "",
+      "illustrations": "Style: Abstract, geometric, or abstract shapes that complement the dark theme and glassmorphism. Can incorporate subtle gradients or neon glows."
+    },
+    "designSummary": "**The Digital Symphony: A Fusion of Dark Elegance and Neon Energy**\n\nThe Vision: We are crafting a modern music streaming experience that feels both premium and intuitively functional, drawing inspiration from the sleek, dark aesthetic of Spotify. The design will balance deep, immersive backgrounds with vibrant, electric accents, creating a dynamic yet uncluttered interface. The core principle is to make the music and its discovery the hero, supported by a seamless, responsive, and highly interactive user experience.\n\n**Execution Blueprint:**\n1. Layout as a Stage: A dual-pane structure (sidebar + main content) provides clear navigation and focus. The main content area will dynamically adapt, featuring large visual elements like banners and grids, interspersed with interactive lists.\n2. Typographic Hierarchy as Rhythm: A clean sans-serif font will establish a clear hierarchy, with distinct weights and sizes guiding the user through content, from headlines to song details.\n3. Color as Emotion: A deep, dark base palette will create immersion, while a vibrant neon green accent will highlight interactive elements, calls-to-action, and key information, evoking energy and modernity.\n4. Interaction as Flow: Smooth animations, subtle hover effects, and responsive transitions will ensure a fluid and engaging user journey, making every interaction feel deliberate and polished.\n5. Glassmorphism & Soft Shadows: These elements will add depth and a premium feel, subtly separating layers and components without overwhelming the dark theme.",
+    "layout": {
+      "grid": {
+        "margins": "Consistent margins around sections and content blocks, typically 24px or 32px.",
+        "padding": "Internal padding for containers and components, typically 16px or 24px.",
+        "compositionApproach": "Hybrid: A fixed left sidebar navigation, a flexible main content area utilizing a responsive grid system (e.g., 12-column for desktop, collapsing to single column for mobile), and a sticky footer for the music player.",
+        "spacing": {
+          "gaps": "Base unit: 8px. Grid gaps are multiples of 8px (e.g., 16px, 24px, 32px).",
+          "rows": "Flexible row heights based on content.",
+          "columns": "12-column grid system for main content, adaptable to screen size.",
+          "compositionApproach": "Not specified"
+        }
+      },
+      "layoutDna": {
+        "contrastSpectrum": "High contrast between dark backgrounds and bright accents/foreground text.",
+        "densitySpectrum": "Moderate to spacious, with clear separation between sections and elements.",
+        "textVsImageEmphasis": "Balanced, with large album art and featured banners taking visual precedence, supported by clear typographic hierarchy for text content.",
+        "complexitySpectrum": "Visually rich but functionally simple, with clear navigation and intuitive component interactions.",
+        "gridAlignmentSpectrum": "Asymmetrical within a structured grid, allowing for dynamic placement and visual interest.",
+        "negativeSpaceUsage": "Generous use of negative space to create a premium, uncluttered feel and highlight content."
+      },
+      "heroSectionLayout": "**Dynamic Album Showcase**\nComposition (Tailwind Spec): Container `h-screen w-full relative flex items-end p-8`.\nHeadline `absolute bottom-8 left-8 z-20 text-7xl font-bold text-white leading-tight`.\nSignature Hook (Framer Motion Spec): Parent container `motion.div` with `initial={{ opacity: 0 }}` and `animate={{ opacity: 1 }}`. Album art `motion.img` inside the container uses `whileHover={{ scale: 1.03, y: -10 }}` with `transition={{ duration: 0.3 }}`. Headline uses `variants` for staggered letter reveal: `initial={{ opacity: 0, y: 20 }}` `animate={{ opacity: 1, y: 0 }}` `transition={{ staggerChildren: 0.05 }}`."
+    },
+    "components": {
+      "images": "Layout Role: Full-bleed background with a fixed position to create a window effect on scroll. | Gallery Type: Horizontal Scroll Filmstrip: A single-row gallery driven by horizontal scroll, where oversized items create a 'peek-a-boo' effect. Images have `border-radius: 8px`.",
+      "buttons": "Primary: `background-color: #1DB954`, `color: #000000`, `border-radius: 9999px`, `padding: 12px 24px`, `font-weight: 600`, `transition: background-color 0.3s ease, transform 0.2s ease`. Secondary: `background-color: transparent`, `color: #FFFFFF`, `border: 1px solid #FFFFFF`, `border-radius: 9999px`, `padding: 12px 24px`, `font-weight: 500`, `transition: background-color 0.3s ease, color 0.3s ease`. Play button: Circular, large, green (#1DB954) with white play icon, `border-radius: 50%`.",
+      "containers": "Method: Background Color & Soft Shadow. Style: `background-color: #191919`, `border-radius: 12px`, `box-shadow: 0 8px 24px rgba(0,0,0,0.2)`, `backdrop-filter: blur(10px)` for glassmorphism effect."
+    },
+    "palette": {
+      "colors": {
+        "customColors": [
+          {
+            "name": "charcoalBackground",
+            "value": "#191919"
+          },
+          {
+            "name": "glassmorphismOverlay",
+            "value": "rgba(255, 255, 255, 0.05)"
+          },
+          {
+            "name": "destructive",
+            "value": "#ff0000"
+          },
+          {
+            "name": "destructiveForeground",
+            "value": "#FFFFFF"
+          }
+        ],
+        "background": "#121212",
+        "secondary": "#FFFFFF",
+        "foreground": "#B3B3B3",
+        "secondaryForeground": "#121212",
+        "primaryForeground": "#000000",
+        "primary": "#1DB954"
+      },
+      "paletteUsageGuide": "The primary color (#1DB954) is for key interactive elements like play buttons, active states, and calls-to-action. The background is a deep charcoal (#121212) for immersion, with a slightly lighter charcoal (#191919) for secondary containers. White (#FFFFFF) serves as a strong accent for text and secondary buttons. Muted foreground text (#B3B3B3) ensures readability against dark backgrounds. Glassmorphism effects use a subtle white overlay.",
+      "paletteAccessibilityNotes": "Ensure sufficient contrast between primary/secondary colors and their foreground text. Text color #B3B3B3 on #121212 background has a contrast ratio of 4.5:1, meeting WCAG AA for normal text. Primary #1DB954 on #121212 background has a contrast ratio of 4.3:1, meeting WCAG AA for normal text. White text on #1DB954 has a contrast ratio of 2.7:1, suitable for large text or UI elements."
+    },
+    "typography": {
+      "headings": {
+        "font": {
+          "fontFamily": "poppins-v2",
+          "role": "headings",
+          "fontJustification": ""
+        },
+        "headingsAccessibilityNotes": "Maintain a minimum font size of 18pt for headings and a contrast ratio of at least 4.5:1 against the background.",
+        "headingsSimilarFonts": [],
+        "headingsUsageGuide": "Headings should be used for titles and section headers. Employ varying weights (e.g., semi-bold, bold) and sizes to establish a clear hierarchy. Ensure ample spacing around headings to give them prominence."
+      },
+      "paragraphs": {
+        "font": {
+          "fontFamily": "poppins-v2",
+          "role": "paragraphs",
+          "fontJustification": ""
+        },
+        "paragraphsUsageGuide": "Paragraphs should be used for body text, descriptions, and song details. Maintain consistent line height and letter spacing for readability. Avoid excessively long lines of text.",
+        "paragraphsSimilarFonts": [],
+        "paragraphsAccessibilityNotes": "Ensure a minimum font size of 16px for body text and a contrast ratio of at least 4.5:1 against the background."
+      },
+      "customFontFamilies": {},
+      "fontSizes": [
+        {
+          "name": "xs",
+          "size": "0.75rem",
+          "lineHeight": "1.25",
+          "letterSpacing": "0.02em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "sm",
+          "size": "0.875rem",
+          "lineHeight": "1.3",
+          "letterSpacing": "0.02em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "base",
+          "size": "1rem",
+          "lineHeight": "1.5",
+          "letterSpacing": "0.02em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "lg",
+          "size": "1.125rem",
+          "lineHeight": "1.4",
+          "letterSpacing": "0.02em",
+          "fontWeight": "500"
+        },
+        {
+          "name": "xl",
+          "size": "1.25rem",
+          "lineHeight": "1.3",
+          "letterSpacing": "0.02em",
+          "fontWeight": "500"
+        },
+        {
+          "name": "2xl",
+          "size": "1.5rem",
+          "lineHeight": "1.2",
+          "letterSpacing": "0.01em",
+          "fontWeight": "600"
+        },
+        {
+          "name": "3xl",
+          "size": "1.875rem",
+          "lineHeight": "1.15",
+          "letterSpacing": "0.01em",
+          "fontWeight": "600"
+        },
+        {
+          "name": "4xl",
+          "size": "2.25rem",
+          "lineHeight": "1.1",
+          "letterSpacing": "0.01em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "5xl",
+          "size": "3rem",
+          "lineHeight": "1.05",
+          "letterSpacing": "0.005em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "6xl",
+          "size": "3.75rem",
+          "lineHeight": "1.05",
+          "letterSpacing": "0.005em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "7xl",
+          "size": "4.5rem",
+          "lineHeight": "1",
+          "letterSpacing": "0.005em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "8xl",
+          "size": "6rem",
+          "lineHeight": "1",
+          "letterSpacing": "0.005em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "9xl",
+          "size": "8rem",
+          "lineHeight": "1",
+          "letterSpacing": "0.005em",
+          "fontWeight": "700"
+        }
+      ],
+      "welcomeSectionTypography": {
+        "placement": "Centered within the hero section, or as a prominent overlay on a featured banner.",
+        "implementation": "Large, bold sans-serif font. Consider subtle text animations like letter staggering or fade-ins for emphasis."
+      }
+    },
+    "originImagesUrls": []
+  },
+  "attachments": {
+    "contentImagesUrls": [],
+    "inspirationImagesUrls": [
+      "https://wixmp-c562ea68f10846b458285ce5.wixmp.com/scraped-screenshots/screenshot-1771341418941.webp"
+    ]
+  },
+  "status": "READY",
+  "plan": "\n\n```json\n{\n  \"sections\": [\n    {\n      \"id\": \"overview\",\n      \"title\": \"## Overview\",\n      \"content\": \"This app creates a modern, dark-themed music streaming web app inspired by Spotify, featuring a sleek interface with song listings, playlists, and artist showcases.\"\n    },\n    {\n      \"id\": \"key-features\",\n      \"title\": \"## Key features\",\n      \"content\": \"- **View Song Listing**: Browse all available songs with details like title, artist, and duration.\\n- **View Song Detail**: View detailed information about a specific song including album art and metadata.\\n- **Filter/Search Songs**: Search and filter songs by title, artist, or genre.\\n- **View Playlist Listing**: Browse curated playlists including Recently Played, Made For You, and Trending.\\n- **View Playlist Detail**: View songs within a specific playlist.\\n- **View Artist Listing**: Browse popular artists and trending musicians.\\n- **View Artist Detail**: View detailed information about a specific artist including their songs.\",\n      \"metadata\": [\n        { \"id\": \"view-song-listing\", \"name\": \"View Song Listing\" },\n        { \"id\": \"view-song-detail\", \"name\": \"View Song Detail\" },\n        { \"id\": \"filter-search-songs\", \"name\": \"Filter/Search Songs\" },\n        { \"id\": \"view-playlist-listing\", \"name\": \"View Playlist Listing\" },\n        { \"id\": \"view-playlist-detail\", \"name\": \"View Playlist Detail\" },\n        { \"id\": \"view-artist-listing\", \"name\": \"View Artist Listing\" },\n        { \"id\": \"view-artist-detail\", \"name\": \"View Artist Detail\" }\n      ]\n    },\n    {\n      \"id\": \"structure\",\n      \"title\": \"## Structure\",\n      \"content\": \"- **Header (Reusable)**: Contains the Spotify logo and navigation links to Home, Search, and Your Library.\\n- **Home Page**: Features a large banner, Recently Played section, Made For You playlists grid, and Trending songs list with play buttons.\\n- **Search Page**: Displays search bar with live filtering and results showing songs, artists, and playlists.\\n- **Library Page**: Shows user's saved playlists, liked songs, and followed artists.\\n- **Footer (Reusable)**: Contains links to company info, communities, and useful resources, matching the Spotify footer structure.\\n- **Bottom Music Player (Reusable)**: Sticky player bar with album thumbnail, song info, playback controls, progress bar, and volume control.\"\n    }\n  ],\n  \"apps\": [\n    {\n      \"id\": \"wix-cms\",\n      \"keyFeatures\": [\n        { \"id\": \"view-song-listing\", \"name\": \"View Song Listing\" },\n        { \"id\": \"view-song-detail\", \"name\": \"View Song Detail\" },\n        { \"id\": \"filter-search-songs\", \"name\": \"Filter/Search Songs\" },\n        { \"id\": \"view-playlist-listing\", \"name\": \"View Playlist Listing\" },\n        { \"id\": \"view-playlist-detail\", \"name\": \"View Playlist Detail\" },\n        { \"id\": \"view-artist-listing\", \"name\": \"View Artist Listing\" },\n        { \"id\": \"view-artist-detail\", \"name\": \"View Artist Detail\" }\n      ]\n    }\n  ],\n  \"version\": \"4.0.1\"\n}\n```"
+}
